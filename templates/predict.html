@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather predictor</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/script.js" async></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a><img class="logo" src="../static/img/logo.png" alt="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="micon">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./predict.html">Predict</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 banner-info">
+                    <div class="content">
+                        <form action="/predict" method="post" id="theForm">
+                            <div class="weather-details">
+                                <input type="radio" name="Outlook" id="dot-1" value="0">
+                                <input type="radio" name="Outlook" id="dot-2" value="1">
+                                <input type="radio" name="Outlook" id="dot-3" value="2">
+                                <span class="weather-title">Outlook</span>
+                                <div class="category">
+                                    <label for="dot-1">
+                                        <span class="dot one"></span>
+                                        <span>Overcast</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-2">
+                                        <span class="dot two"></span>
+                                        <span>Rain</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-3">
+                                        <span class="dot three"></span>
+                                        <span>Sunny</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weather-details">
+                                <input type="radio" name="Temperature" id="dot-11" value="0">
+                                <input type="radio" name="Temperature" id="dot-12" value="1">
+                                <input type="radio" name="Temperature" id="dot-13" value="2">
+                                <span class="weather-title">Temperature</span>
+                                <div class="category">
+                                    <label for="dot-11">
+                                        <span class="dot one-11"></span>
+                                        <span>Cool</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-12">
+                                        <span class="dot two-12"></span>
+                                        <span>Mild</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-13">
+                                        <span class="dot three-13"></span>
+                                        <span>Hot</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weather-details">
+                                <input type="radio" name="Humidity" id="dot-21" value="0">
+                                <input type="radio" name="Humidity" id="dot-22" value="1">
+                                <span class="weather-title">Humidity</span>
+                                <div class="category">
+                                    <label for="dot-21">
+                                        <span class="dot one-21"></span>
+                                        <span>Normal</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-22">
+                                        <span class="dot two-22"></span>
+                                        <span>High</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="weather-details">
+                                <input type="radio" name="Wind" id="dot-31" value="0">
+                                <input type="radio" name="Wind" id="dot-32" value="1">
+                                <span class="weather-title">Wind</span>
+                                <div class="category">
+                                    <label for="dot-31">
+                                        <span class="dot one-31"></span>
+                                        <span>Strong</span>
+                                    </label>&nbsp;&nbsp;&nbsp;
+                                    <label for="dot-32">
+                                        <span class="dot two-32"></span>
+                                        <span>Weak</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Predict">
+                            </div>
+                            <h3>{{pred}}</h3><br>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 banner-img">
+                    <img src="../static/img/g.webp" class="img-responsive" width="500" height="600">
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
