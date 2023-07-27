@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect, url_for, request
-import requests
 import pickle
 
 app = Flask(__name__)
