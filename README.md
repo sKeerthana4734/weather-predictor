@@ -1,7 +1,7 @@
 # weather-predictor
 ## A simple weather predictor using Machine Learning and python flask.
 
-### Project Output images:
+### Project Output Images:
 #### 1. Home page<br><br>
 ![image](https://github.com/sKeerthana4734/weather-predictor/assets/91558152/67721cf9-81fb-4eb8-83b9-d9647a9eec63)
 
